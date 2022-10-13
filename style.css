@@ -3,7 +3,7 @@ If this selector is done correctly,
 you'll see that your title "My Checkers Game" 
 is centered on the page. */
 
-selector_1{
+h1{
   text-align: center;
 }
 
@@ -12,7 +12,7 @@ Once this selector is done,
 you'll see that the red chunk of images
 shift towards the right. */
 
-selector_2{
+#board{
   display: grid;
   grid-template-columns: repeat(7, 50px);
   justify-content: center;
@@ -22,7 +22,7 @@ selector_2{
  Now you'll see that the "\~The Best Game Ever\~" text 
 shifts to the center of the page and the font becomes smaller.*/
 
-selector_3{
+.subtitle{
   text-align: center;
   font-size: 15px;
 }
@@ -31,7 +31,7 @@ selector_3{
 You'll see that the text "by Insert Name" becomes 
 centered, grey, and smaller. */
 
-selector_4{
+h2+p{
   text-align: center;
   color: grey;
   font-size: 10px;
@@ -44,7 +44,7 @@ differently from number 4. This will center and underline
 the text underneath the board(the area currently 
 filled with red images). */
 
-selector_5{
+div~p{
   text-align: center;
   text-decoration: underline;
 }
@@ -54,7 +54,7 @@ that is a div. When this selector is correct,
 the two red chunks will disappear and you'll be able to see
 all of the red board pieces. */
 
-selector_6{
+div > img{
   width: 95%;
   height: 95%;
   margin: auto;
@@ -71,7 +71,7 @@ The correct selector will result in the outline
 of all of the cells of the board correctly displaying. 
 The board should be centered. */
 
-selector_7{
+div > .cell{
   display: block;
   height: 50px;
   width: 50px;
@@ -86,7 +86,7 @@ selector_7{
 inside of another div inside of another div. 
 This will result in the blue pieces appearing. */
 
-selector_8{
+div div div{
   display: block;
   height: 95%;
   width: 95%;
@@ -107,7 +107,7 @@ odd number element with a particular class,
 then use what you used in the above two selectors 
 to specify what the parent must be.*/
 
-selector_9{
+#board > .cell:nth-of-type(odd){
   background-color: black;
 }
 
@@ -125,7 +125,7 @@ of a div inside of a div when you hover over it.
 Finally, figure out how to select two types of things
 at the same time.* */
 
-selector_10{
+img:hover, div div div:hover{
   border: solid yellow thin;
 }
 
@@ -135,3 +135,9 @@ Now that your board is looking great and you've become a css selector master, he
 2. Add HTML to the index.html file that gives the person looking at your page all of the rules of checkers. This can be done however you want to. Then write your own style rules to make this section of the page look great.
 3. Research a selector that we didn't use in this lab, then find a way to use it. Feel free to add HTML as needed to make the selector applicable. 
 4. Propose a different extension of your choice. Write what the extension should look like then implement it in your code. */
+
+
+#board > #purple{
+  background-color: purple;
+
+}
